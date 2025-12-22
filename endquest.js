@@ -1,10 +1,11 @@
 const scene = document.querySelector('.MainEndDiv');
+const textblock = document.querySelector('.textblock');
 const pencilImg = ['img/pencil.svg', 'img/pencil2.svg', 'img/pencil3.svg'];
 const button = document.getElementById('toggle');
 
 const pencils = [];
 
-for (let i = 0; i < 60; i++) {
+for (let i = 0; i < 50; i++) {
   const div = document.createElement('div');
   div.classList.add('pencil');
   
@@ -24,7 +25,7 @@ for (let i = 0; i < 60; i++) {
     element: div,
     x: Math.random() * 100,
     y: -Math.random() * 200,
-    speed: 1 + Math.random() * 2,
+    speed: 1 + Math.random() * 10,
     rotation: Math.random() * 360,
     width: w,
     height: h
@@ -82,4 +83,6 @@ button.addEventListener('click', () => {
     button.textContent = 'Start';
     if (timeoutId) clearTimeout(timeoutId);
   }
+
+  textblock.classList.add('newtrans')
 });
