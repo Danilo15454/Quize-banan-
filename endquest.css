@@ -8,6 +8,7 @@ body {
     height: 100vh;
     width: 100%;
     display: flex;
+    z-index: 0;
 }
 
 .textblock {
@@ -24,4 +25,35 @@ body {
     justify-content: center;
     margin: auto;
     margin-top: 150px;
+    z-index: 2;
+}
+
+
+
+
+
+#toggle {
+  position: fixed;
+  z-index: 10;
+  top: 20px;
+  left: 20px;
+  padding: 10px 16px;
+}
+
+.scene {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background: #f5f5f5;
+}
+
+.pencil {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+   z-index: 1;
 }
