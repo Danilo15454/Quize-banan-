@@ -48,7 +48,7 @@
   .answer:hover {
     border-color: rgb(14, 53, 101);
   }
-  .answer:active{
+  .active{
     border-color: rgb(15, 38, 68); ;
   }
        
