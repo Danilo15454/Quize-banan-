@@ -1,26 +1,27 @@
 body{
-    margin: none;
+    margin: 0;
     background-color: #f5f8fa;
     font-family: Roboto, sans-serif;
 }
 .main{
-    width: 1140px;
+    max-width: 1140px;
+    width: 100%;
+    margin: 200px auto;
     height: 1520px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     background-color: #f5f8fa;
-    margin-top: 200px;
 }
 .test2,.test1,.test3,.test4{
     width: 60%;
     height: 300px;
     background-color: rgb(255, 255, 255);
-    text-align: center;
+    text-align: left;
     border-radius: 10px;
 }
 p{
-   margin-right: 600px; 
+   margin-left: 20px; 
    width: 100px;
 }
 .name:hover{
@@ -38,10 +39,8 @@ a{
     color: grey;
     font-size: large;
     font-weight: bold;
-    width: 100px;
 }
 .priclad{
     color: rgb(163, 163, 163);
     font-weight: bold;
-    width: 100px;
 }
