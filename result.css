@@ -25,13 +25,15 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-     flex-direction: column; /* ? */
+    flex-direction: column; /* ? */
+    font-family: Comic Sans MS, Comic Sans;
+    font-size: larger;
 }
 .nazvanie{
     width: 95%;
     height: 25%;
     background-color: rgb(100, 200, 200);
-    margin: auto;
+    /* margin: auto; */
     margin-top: 2.5%;
     border-radius: 1vw;
     display: flex;
@@ -40,31 +42,42 @@ body{
 }
 .otveti{
     width: 100%;
-    height: 100%;
+    height: 15%;
     display: flex;
     justify-content: baseline;
 }
 .umnichka{
-    width: 40%;
-    height: 20%;
+    width: 45%;
+    height: 100%;
     background-color: rgb(100, 200, 100);
     margin: auto;
     margin-top: 2.5%;
     border-radius: 1vw;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
 }
 .tupoe{
-    width: 40%;
-    height: 20%;
+    width: 45%;
+    height: 100%;
     background-color: rgb(200, 100, 100);
     margin: auto;
     margin-top: 2.5%;
     border-radius: 1vw;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
+}
+.procenttuposti{
+    width: 95%;
+    height: 10%;
+    background-color: rgb(255, 0, 0);
+    margin: auto;
+    margin-top: 5%;
+    border-radius: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
