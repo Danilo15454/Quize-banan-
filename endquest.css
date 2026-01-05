@@ -29,6 +29,7 @@ body {
     left: calc(50vw - 210px);
     z-index: 2;
     transform: translateY(-80px);
+    user-select: none;
 }
 
 
@@ -58,6 +59,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
+  user-select: none;
 }
 
 .newtrans{

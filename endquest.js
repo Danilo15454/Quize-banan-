@@ -10,6 +10,7 @@ for (let i = 0; i < 50; i++) {
   div.classList.add('pencil');
   
   const img = document.createElement('img');
+  img.draggable = false;
   img.src = pencilImg[Math.floor(Math.random() * pencilImg.length)];
   div.appendChild(img);
   scene.appendChild(div);
