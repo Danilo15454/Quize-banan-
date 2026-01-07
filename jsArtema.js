@@ -1,7 +1,7 @@
-const testName = document.querySelector("#test1")
-const testTema = document.querySelector("#tema")
-const testAuthor = document.querySelector("#author")
-const testPriclad = document.querySelector("#priclad")
+const testName = document.querySelectorAll(".name")
+const testTema = document.querySelectorAll(".tema")
+const testAuthor = document.querySelectorAll(".author")
+const testPriclad = document.querySelectorAll(".priclad")
 async function loadData() {
   try {
     const response = await fetch('./json.json');
@@ -11,6 +11,10 @@ async function loadData() {
     testTema.textContent = jsonData.tema
     testAuthor.textContent = jsonData.author
     testPriclad.textContent = jsonData.priclad
+    testName.textContent = jsonData.nazvanie1
+    testTema.textContent = jsonData.tema1
+    testAuthor.textContent = jsonData.author1
+    testPriclad.textContent = jsonData.priclad1
 
   } catch (error) {
     console.error('Error fetching JSON:', error);

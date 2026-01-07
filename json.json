@@ -137,10 +137,10 @@
       ]
     },
     {
-      "nazvanie": "Столицы мира",
-      "tema": "География",
-      "author": "TeamBilly",
-      "priclad": "Пример вопроса:",
+      "nazvanie1": "Столицы мира",
+      "tema1": "География",
+      "author1": "TeamBilly",
+      "priclad1": "Пример вопроса:",
       "questions": [
         {
           "question": "Столица Украины?",
