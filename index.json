@@ -1,0 +1,16 @@
+{
+    "tests": [
+        {
+            "nazvanie": "banani",
+            "tema": "bananav",
+            "author": "TeamBilly",
+            "priclad": "Приклад запитання:"
+        },
+        {
+            "nazvanie": "banani2",
+            "tema": "bananav",
+            "author": "TeamKilly",
+            "priclad": "Приклад запитання:"
+        }
+    ]
+}  
