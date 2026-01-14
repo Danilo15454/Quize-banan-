@@ -1,0 +1,16 @@
+{
+  "items": [
+    { 
+        "title": "Первый блок",
+        "text": "some text"
+    },
+    { 
+        "title": "Второй блок",
+        "text": "some text"
+    },
+    { 
+        "title": "Третий блок",
+        "text": "some text"
+    }
+  ]
+}
