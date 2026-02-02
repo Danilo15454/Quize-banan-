@@ -1,0 +1,54 @@
+.div{
+    
+
+}
+
+.planka{
+    height: 70px;
+    background-color: rgb(114, 146, 236);
+    color: aliceblue;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.vopros{
+    height: 600px;
+    background-color: rgb(211, 211, 211);
+    margin-top: 10px;
+    border-radius: 10px;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;       
+}
+
+.answers{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 12px;
+    margin-top: 10px;
+}
+.answer {
+    background-color: rgb(176, 206, 243);
+    border: 3px solid transparent; 
+    max-width: 100%;
+    height: 420px;
+    border-radius: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border 0.3s ;
+
+  }
+  
+  .answer:hover {
+    border-color: rgb(14, 53, 101);
+  }
+  .active{
+    border-color: rgb(15, 38, 68); ;
+  }
+       
