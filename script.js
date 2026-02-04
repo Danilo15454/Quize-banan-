@@ -13,22 +13,20 @@ async function loadData() {
   try {
     const response = await fetch('./json.json');
     const jsonData = await response.json(); // Parses the response into a JS object
-    console.log(jsonData.questions);
     let questions = jsonData.questions
-    console.log(jsonData.questions)
-    questCounterBlock.textContent = `${questCounter + 1} / ${questions.length}`
-    switcher(questCounter, questions)
+    questCounterBlock.textContent = `${questCounter + 1}`
+    switcher(i,questions);
   } catch (error) {
     console.error('Error fetching JSON:', error);
   }
 }
 loadData();
 function switcher(i, questions) {
-  answersBlock.textContent = ""
-  let answers = questions[questCounter].answers
+  let answersBlock = questions[questCounter];
   const element = questions[questCounter];
   console.log(element)
   voprosBlock.textContent = questions[questCounter].question
+  answersBlock.textContent = ""
   console.log(answers)
   let obj = localStorage.getItem("banani")
   let parse = ""
@@ -50,7 +48,7 @@ function switcher(i, questions) {
       parse.userAnswer[i] = ans1Block.textContent
       localStorage.setItem("banani", JSON.stringify(parse))
       questCounter++
-      questCounterBlock.textContent = `${questCounter + 1} / ${questions.length}`
+      questCounterBlock.textContent = `${questCounter + 1}`
       switcher(i, questions)
     })
   }
