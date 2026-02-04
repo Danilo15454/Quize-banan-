@@ -27,9 +27,9 @@ function switcher(i, questions) {
   answersBlock.textContent = ""
   let answers = questions[questCounter].answers
   const element = questions[questCounter];
-  console.log(element)
+  // console.log(element)
   voprosBlock.textContent = questions[questCounter].question
-  console.log(answers)
+
   let obj = localStorage.getItem("banani")
   let parse = ""
   if (obj == null){
@@ -47,7 +47,7 @@ function switcher(i, questions) {
     answersBlock.appendChild(ans1Block)
     ans1Block.addEventListener("click", () => {
       console.log(ans1Block.textContent)
-      parse.userAnswer[i] = ans1Block.textContent
+      parse.userAnswer[questCounter] = ans1Block.textContent
       localStorage.setItem("banani", JSON.stringify(parse))
       questCounter++
       questCounterBlock.textContent = `${questCounter + 1} / ${questions.length}`
@@ -56,3 +56,4 @@ function switcher(i, questions) {
   }
 }
 console.log(storage)
+// добавить(недоспелый банан)
