@@ -7,13 +7,13 @@ body{
     max-width: 1140px;
     width: 100%;
     margin: 200px auto;
-    height: 580px;
+    height: 280px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     background-color: #f5f8fa;
 }
-.test2,.test1,.test3,.test4{
+.test1,.test2{
     width: 60%;
     height: 135px;
     background-color: rgb(255, 255, 255);
