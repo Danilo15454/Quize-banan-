@@ -1,9 +1,8 @@
 const testName = document.querySelector(".name")
-const testTema = document.querySelector(".tema")
 const testAuthor = document.querySelector(".author")
 const testPriclad = document.querySelector(".priclad")
-const classes = ["nazvanie", "tema", "author", "priclad"]
-function createBlock({nazvanie, tema, author, priclad}){
+const classes = ["nazvanie", "author", "priclad"]
+function createBlock({nazvanie, author, priclad}){
   const container = document.querySelector(".container")
   container.classList.add('container')
 
@@ -27,7 +26,6 @@ async function loadData() {
     const test = jsonData.tests[0]
 
     testName.textContent = test.nazvanie
-    testTema.textContent = test.tema
     testAuthor.textContent = test.author
     testPriclad.textContent = test.priclad
 

@@ -15,7 +15,7 @@ body{
 }
 .test2,.test1,.test3,.test4{
     width: 60%;
-    height: 175px;
+    height: 135px;
     background-color: rgb(255, 255, 255);
     text-align: left;
     border-radius: 10px;
