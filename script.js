@@ -30,8 +30,15 @@ function switcher(i, questions) {
   console.log(element)
   voprosBlock.textContent = questions[questCounter].question
   console.log(answers)
-  const obj = localStorage.getItem("banani")
-  const parse = JSON.parse(obj)
+  let obj = localStorage.getItem("banani")
+  let parse = ""
+  if (obj == null){
+    localStorage.setItem("banani", JSON.stringify(test))
+  }else{
+    parse = JSON.parse(obj)
+
+  }
+
   for (let j = 0; j < answers.length; j++) {
     const element = answers[j].answers;
     const ans1Block = document.createElement('div')
