@@ -38,8 +38,15 @@ function switcher(i, questions) {
     parse = JSON.parse(obj)
 
   }
-
+  console.log(questions.length)
+  console.log(questCounter)
   for (let j = 0; j < answers.length; j++) {
+    if (questCounter == questions.length-1){
+      console.log("1 иф")
+      window.location = "http://127.0.0.1:5500/result.html"
+      break
+    }
+    
     const element = answers[j].answers;
     const ans1Block = document.createElement('div')
     ans1Block.classList.add('answer')
@@ -50,7 +57,7 @@ function switcher(i, questions) {
       parse.userAnswer[questCounter] = ans1Block.textContent
       localStorage.setItem("banani", JSON.stringify(parse))
       questCounter++
-      questCounterBlock.textContent = `${questCounter + 1} / ${questions.length}`
+      questCounterBlock.textContent = `${questCounter + 1} / ${questions.length}`      
       switcher(i, questions)
     })
   }
