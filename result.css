@@ -39,6 +39,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
 }
 .otveti{
     width: 100%;
@@ -56,6 +57,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
 }
 .tupoe{
     width: 45%;
@@ -67,6 +69,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
 }
 .procenttuposti{
     width: 95%;
@@ -101,6 +104,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
 }
 .vopros{
     width: 45%;
@@ -111,6 +115,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
 }
 .more{
     width: 95%;
@@ -134,6 +139,7 @@ body{
     justify-content: center;
     align-items: center;
     transition: all 0.1s;
+    user-select: none;
 }
 .uppermore:hover{
     background-color: rgb(255, 150, 0);
