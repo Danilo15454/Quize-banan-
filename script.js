@@ -1,6 +1,7 @@
 const voprosBlock = document.querySelector(".vopros")
 const answersBlock = document.querySelector(".answers")
-const questCounterBlock = document.querySelector(".planka")
+const planka = document.querySelector(".planka")
+const questCounterBlock = document.querySelector(".countert")
 const tctBlock = document.querySelector(".tct")
 storage = window.localStorage
 let questCounter = 0
