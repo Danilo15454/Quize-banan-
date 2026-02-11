@@ -39,6 +39,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
 }
 .otveti{
     width: 100%;
@@ -56,6 +57,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
 }
 .tupoe{
     width: 45%;
@@ -67,6 +69,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
 }
 .procenttuposti{
     width: 95%;
@@ -88,8 +91,8 @@ body{
     width: 100%;
     height: 10%;
     display: flex;
-    justify-content: baseline;
-    margin: auto;
+    /* justify-content: baseline; */
+    /* margin: auto; */
     margin-top: 2.5%;
 }
 .obshchee{
@@ -101,6 +104,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
 }
 .vopros{
     width: 45%;
@@ -111,48 +115,39 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
 }
 .more{
     width: 95%;
     height: 10%;
-    background-color: rgb(255, 150, 0);
+    background-color: rgb(150, 75, 0);
     margin: auto;
-    margin-top: 2.5%;
+    margin-bottom: 2.5%;
     border-radius: 1vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.uppermore{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 200, 0);
+    /* margin: auto;
+    margin-bottom: 2.5%; */
+    border-radius: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s;
+    user-select: none;
+}
+.uppermore:hover{
+    background-color: rgb(255, 150, 0);
+    transition: all 0.1s;
+}
+.uppermore:active{
+    width: 97.5%;
+    height: 85%;
+    transition: all 0.1s;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-tupoe banan
-psina banan
-srednestaticheskiy banan
-speliy banan
-umnoe banan
-enshtein banan
-bog banan
-*/
