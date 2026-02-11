@@ -44,7 +44,7 @@ function switcher(i, questions) {
   for (let j = 0; j < answers.length; j++) {
     if (questCounter == questions.length-1){
       console.log("1 иф")
-      window.location = "http://127.0.0.1:5500/result.html"
+      window.location = "http://127.0.0.1:5500/endquest.html"
       break
     }
 
@@ -66,7 +66,7 @@ function switcher(i, questions) {
 console.log(storage)
 // добавить(недоспелый банан)
 tctBlock.addEventListener('click',
-  function (){window.location = "http://127.0.0.1:5500/result.html?banan=nespeliy"}
+  function (){window.location = "http://127.0.0.1:5500/endquest.html?banan=nespeliy"}
 )
 const answer = document.querySelectorAll('.answer');
 answer.forEach((item)=>{

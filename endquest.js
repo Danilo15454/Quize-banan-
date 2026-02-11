@@ -2,7 +2,8 @@ const scene = document.querySelector('.MainEndDiv');
 const textblock = document.querySelector('.textblock');
 const pencilImg = ['img/pencil.svg', 'img/pencil2.svg', 'img/pencil3.svg'];
 const button = document.getElementById('toggle');
-
+const locate = window.location.search
+console.log(locate)
 const pencils = [];
 
 for (let i = 0; i < 50; i++) {
@@ -58,7 +59,7 @@ function animate() {
   animationId = requestAnimationFrame(animate);
 }
 
-button.addEventListener('click', () => {
+document.addEventListener('DOMContentLoaded', () => {
   if (!isRunning) {
     isRunning = true;
     button.textContent = 'Stop';
@@ -75,6 +76,7 @@ button.addEventListener('click', () => {
       isRunning = false;
       cancelAnimationFrame(animationId);
       button.textContent = 'Start';
+      window.location = `http://127.0.0.1:5500/result.html${locate}`
     }, 3000);
 
   } else {
