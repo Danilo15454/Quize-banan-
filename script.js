@@ -1,6 +1,7 @@
 const voprosBlock = document.querySelector(".vopros")
 const answersBlock = document.querySelector(".answers")
 const questCounterBlock = document.querySelector(".planka")
+const tctBlock = document.querySelector(".tct")
 storage = window.localStorage
 let questCounter = 0
 const test = {
@@ -46,7 +47,7 @@ function switcher(i, questions) {
       window.location = "http://127.0.0.1:5500/result.html"
       break
     }
-    
+
     const element = answers[j].answers;
     const ans1Block = document.createElement('div')
     ans1Block.classList.add('answer')
