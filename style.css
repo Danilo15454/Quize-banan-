@@ -7,19 +7,28 @@ body {
     height: 100px;
 }
 .planka {
+  position: relative;
   height: 70px;
   background-color: rgb(114, 146, 236);
   color: aliceblue;
-  font-size: 40px;
   display: flex;
-  align-items: center;
+  font-size: 40px;
+}
+.countert {
+  width: 100px;
+  height: 50px;
+  display: flex;
+  margin: auto;
   justify-content: center;
+  align-items: center;
 }
 .tct{
-  display: flex;
-  justify-content: end;
-  left: 100%;
-  width: 100%;
+  position: absolute;
+  right: 20px;
+  width: 50px;
+  height: 30px;
+  top: 18%;
+  padding: auto;
 }
 .tct2{
   width: 50px;
