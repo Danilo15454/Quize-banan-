@@ -1,7 +1,11 @@
 body {
   margin: 0;
 }
-
+.header{
+    background-color: rgb(114, 146, 236);
+    width: 100%;
+    height: 100px;
+}
 .planka {
   height: 70px;
   background-color: rgb(114, 146, 236);

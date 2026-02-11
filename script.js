@@ -65,3 +65,6 @@ function switcher(i, questions) {
 }
 console.log(storage)
 // добавить(недоспелый банан)
+tctBlock.addEventListener('click',
+  function (){window.location = "http://127.0.0.1:5500/result.html?banan=nespeliy"}
+)
