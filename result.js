@@ -1,10 +1,11 @@
-const voprosBlock = document.querySelector(".vopros")
-const answersBlock = document.querySelector(".answers")
-const planka = document.querySelector(".planka")
-const questCounterBlock = document.querySelector(".countert")
-const tctBlock = document.querySelector(".tct")
+let URLparams = new URLSearchParams(window.location.search)
+let bananaType = URLparams.get('banan')
+console.log(bananaType)
+const bananaTypeBlock = document.querySelector('.tupoe')
+if (bananaType) {
+    bananaTypeBlock.textContent = bananaType
+}
 storage = window.localStorage
-let questCounter = 0
 const test = {
     name: "test",
     userAnswer: [],
@@ -17,6 +18,7 @@ async function loadData() {
     const jsonData = await response.json(); // Parses the response into a JS object
     console.log(jsonData);
     let category = jsonData.category
+
   } catch (error) {
     console.error('Error fetching JSON:', error);
   }
@@ -25,7 +27,6 @@ loadData();
 
 console.log(storage)
 // добавить(недоспелый банан)
-tctBlock.addEventListener('click',
-  function (){window.location = "http://127.0.0.1:5500/endquest.html?banan=nespeliy"}
-)
 
+
+document.querySelector('.more').addEventListener('click',()=>{    window.location = "http://127.0.0.1:5500/newartema.html"})

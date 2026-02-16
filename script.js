@@ -55,7 +55,6 @@ function switcher(i, questions) {
     ans1Block.textContent = element
     answersBlock.appendChild(ans1Block)
     ans1Block.addEventListener("click", () => {
-      console.log(ans1Block.textContent)
       parse.userAnswer[questCounter] = ans1Block.textContent
       localStorage.setItem("banani", JSON.stringify(parse))
       questCounter++
