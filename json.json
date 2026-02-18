@@ -1,6 +1,7 @@
 {
   "category": "opros",
   "name": "Какой ты банан?",
+  "shortName": "banani",
   "questions": [
     {
       "question": "что сегодня кушал никита",

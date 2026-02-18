@@ -11,6 +11,14 @@ const test = {
     userAnswer: [],
     userChap: []
 }
+// Работа функции чтобы проверяло правильность ответа и выдавало умный или нет
+function oprosCheck(){
+
+}
+function testCheck(){
+
+}
+
 
 async function loadData() {
   try {
@@ -18,7 +26,11 @@ async function loadData() {
     const jsonData = await response.json(); // Parses the response into a JS object
     console.log(jsonData);
     let category = jsonData.category
-
+    if (category == "opros") {
+      oprosCheck()
+    }else if(category == "test"){
+      testCheck()
+    }
   } catch (error) {
     console.error('Error fetching JSON:', error);
   }

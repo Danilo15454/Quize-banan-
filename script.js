@@ -6,11 +6,13 @@ const tctBlock = document.querySelector(".tct")
 storage = window.localStorage
 let questCounter = 0
 const test = {
-    name: "test",
     userAnswer: [],
     userChap: []
 }
-
+// Влада делает переход на этот сайт и ссылка будет
+// http://127.0.0.1:5500/index.html?test=banani
+// Сделать запрос через fetch c учетом ссылки и названия теста
+// по типу    const response = await fetch('./тутназвание.json');
 async function loadData() {
   try {
     const response = await fetch('./json.json');
@@ -65,6 +67,8 @@ function switcher(i, questions) {
 }
 console.log(storage)
 // добавить(недоспелый банан)
+// Недоспелый банан убираем (Не закончил тест)
+// Передача через ссылку неоконченого теста 
 tctBlock.addEventListener('click',
   function (){window.location = "http://127.0.0.1:5500/endquest.html?banan=nespeliy"}
 )
