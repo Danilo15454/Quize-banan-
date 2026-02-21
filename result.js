@@ -1,13 +1,17 @@
 let URLparams = new URLSearchParams(window.location.search)
 let bananaType = URLparams.get('banan')
 console.log(bananaType)
+
 const bananaTypeBlock = document.querySelector('.tupoe')
+const procentBlock = document.querySelector('.umnichka')
+const scaleBlock = document.querySelector('.procentumnicka')
+const timeBlock = document.querySelector('.obshchee')
+const describeBlock = document.querySelector('.vopros')
 if (bananaType) {
     bananaTypeBlock.textContent = bananaType
 }
 storage = window.localStorage
 const test = {
-    name: "test",
     userAnswer: [],
     userChap: []
 }
