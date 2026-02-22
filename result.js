@@ -85,10 +85,10 @@ function oprosCheck(questions, nametest, time) {
   let procents = (trueAnswer / questions.length) * 100
   procentBlock.textContent = Math.round(procents) + "%"
 
-  if (procents <= 16) {
+  if (procents <= 17) {
     bananaTypeBlock.textContent = `Ты: ${obj.neBanan.name}`
     describeBlock.textContent = `Описание: ${obj.neBanan.desc}`
-  } else if (procents >= 17 && procents <= 50) {
+  } else if (procents >= 18 && procents <= 50) {
     bananaTypeBlock.textContent = `Ты: ${obj.tupoiBanan.name}`
     describeBlock.textContent = `Описание: ${obj.tupoiBanan.desc}`
   } else if (procents >= 51 && procents <= 84) {
