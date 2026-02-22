@@ -27,6 +27,7 @@ async function loadData() {
   }
 }
 loadData();
+let startTime = Date.now()
 function switcher(i, questions) {
   answersBlock.textContent = ""
   let answers = questions[questCounter].answers
@@ -47,7 +48,9 @@ function switcher(i, questions) {
   for (let j = 0; j < answers.length; j++) {
     if (questCounter == questions.length-1){
       console.log("1 иф")
-      window.location = "http://127.0.0.1:5500/endquest.html"
+      let endTime = Date.now();
+      let durationInSeconds = Math.floor((endTime - startTime) / 1000);
+      window.location = `http://127.0.0.1:5500/endquest.html?time=${durationInSeconds}`
       break
     }
 
@@ -70,7 +73,11 @@ console.log(storage)
 // Недоспелый банан убираем (Не закончил тест)
 // Передача через ссылку неоконченого теста 
 tctBlock.addEventListener('click',
-  function (){window.location = "http://127.0.0.1:5500/endquest.html?banan=nespeliy"}
+  function (){
+    let endTime = Date.now();
+    let durationInSeconds = Math.floor((endTime - startTime) / 1000);
+    window.location = `http://127.0.0.1:5500/endquest.html?banan=nespeliy&time=${durationInSeconds}`
+  }
 )
 const answer = document.querySelectorAll('.answer');
 answer.forEach((item)=>{
