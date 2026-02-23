@@ -1,7 +1,7 @@
 {
-  "category": "opros",
+  "category": "опрос",
   "name": "Какой ты банан?",
-  "shortName": "banani",
+  "shortName": "банан",
   "questions": [
     {
       "question": "что сегодня кушал никита",

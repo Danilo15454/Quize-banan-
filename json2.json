@@ -1,4 +1,7 @@
 {
+  "category": "опрос",
+  "name": "Столицы стран",
+  "shortName": "столица",
   "questions": [
     {
       "question": "Столица Украины?",
