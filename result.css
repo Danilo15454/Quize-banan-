@@ -1,7 +1,8 @@
-body{
+body {
     margin: 0;
 }
-.top{
+
+.top {
     width: 100vw;
     height: 5vw;
     background-color: rgb(127, 255, 212);
@@ -9,13 +10,15 @@ body{
     justify-content: center;
     align-items: center;
 }
-.logo{
+
+.logo {
     width: 5%;
     height: 80%;
     background-color: rgb(148.8, 200.1, 198.8);
     border-radius: 1vw;
 }
-.main{
+
+.main {
     width: 80vw;
     height: 45vw;
     background-color: rgb(200, 200, 200);
@@ -25,11 +28,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* ? */
+    flex-direction: column;
+    /* ? */
     font-family: Comic Sans MS, Comic Sans;
     font-size: larger;
 }
-.nazvanie{
+
+.nazvanie {
     width: 95%;
     height: 25%;
     background-color: rgb(100, 200, 200);
@@ -40,13 +45,15 @@ body{
     justify-content: center;
     align-items: center;
 }
-.otveti{
+
+.otveti {
     width: 100%;
     height: 10%;
     display: flex;
     justify-content: baseline;
 }
-.umnichka{
+
+.umnichka {
     width: 45%;
     height: 100%;
     background-color: rgb(100, 200, 100);
@@ -57,7 +64,8 @@ body{
     justify-content: center;
     align-items: center;
 }
-.tupoe{
+
+.tupoe {
     width: 45%;
     height: 100%;
     background-color: rgb(200, 100, 100);
@@ -68,7 +76,8 @@ body{
     justify-content: center;
     align-items: center;
 }
-.procenttuposti{
+
+.procenttuposti {
     width: 95%;
     height: 10%;
     background-color: rgb(255, 0, 0);
@@ -78,13 +87,15 @@ body{
     justify-content: left;
     align-items: center;
 }
-.procentumnicka{
+
+.procentumnicka {
     width: 25%;
     height: 100%;
     background-color: rgb(0, 255, 0);
     border-radius: 1vw;
 }
-.time{
+
+.time {
     width: 100%;
     height: 10%;
     display: flex;
@@ -92,17 +103,20 @@ body{
     margin: auto;
     margin-top: 2.5%;
 }
-.obshchee{
+
+.obshchee {
     width: 45%;
     height: 100%;
-    background-color: rgb(240, 230, 140);;
+    background-color: rgb(240, 230, 140);
+    ;
     margin: auto;
     border-radius: 1vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.vopros{
+
+.vopros {
     width: 45%;
     height: 100%;
     background-color: rgb(240, 230, 140);
@@ -112,7 +126,8 @@ body{
     justify-content: center;
     align-items: center;
 }
-.more{
+
+.more {
     width: 95%;
     height: 10%;
     background-color: rgb(255, 150, 0);
@@ -123,36 +138,3 @@ body{
     justify-content: center;
     align-items: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-tupoe banan
-psina banan
-srednestaticheskiy banan
-speliy banan
-umnoe banan
-enshtein banan
-bog banan
-*/

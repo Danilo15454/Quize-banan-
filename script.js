@@ -4,9 +4,9 @@ const questCounterBlock = document.querySelector(".planka")
 storage = window.localStorage
 let questCounter = 0
 const test = {
-    name: "test",
-    userAnswer: [],
-    userChap: []
+  name: "test",
+  userAnswer: [],
+  userChap: []
 }
 
 async function loadData() {
@@ -15,7 +15,7 @@ async function loadData() {
     const jsonData = await response.json(); // Parses the response into a JS object
     let questions = jsonData.questions
     questCounterBlock.textContent = `${questCounter + 1}`
-    switcher(i,questions);
+    switcher(i, questions);
   } catch (error) {
     console.error('Error fetching JSON:', error);
   }
@@ -30,9 +30,9 @@ function switcher(i, questions) {
   console.log(answers)
   let obj = localStorage.getItem("banani")
   let parse = ""
-  if (obj == null){
+  if (obj == null) {
     localStorage.setItem("banani", JSON.stringify(test))
-  }else{
+  } else {
     parse = JSON.parse(obj)
 
   }

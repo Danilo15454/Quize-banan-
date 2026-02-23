@@ -8,7 +8,7 @@ const pencils = [];
 for (let i = 0; i < 50; i++) {
   const div = document.createElement('div');
   div.classList.add('pencil');
-  
+
   const img = document.createElement('img');
   img.draggable = false;
   img.src = pencilImg[Math.floor(Math.random() * pencilImg.length)];
@@ -62,7 +62,7 @@ button.addEventListener('click', () => {
   if (!isRunning) {
     isRunning = true;
     button.textContent = 'Stop';
-    
+
     // обновляем случайный поворот всех карандашей
     pencils.forEach(p => {
       p.rotation = Math.random() * 360;

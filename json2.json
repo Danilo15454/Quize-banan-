@@ -1,4 +1,8 @@
 {
+  "nazvanie": "Столицы стран",
+  "tema": "Страны",
+  "author": "TeamBilly",
+  "priclad": "Пример вопроса: Столица Польши?",
   "questions": [
     {
       "question": "Столица Украины?",

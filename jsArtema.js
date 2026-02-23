@@ -2,7 +2,7 @@ const testName = document.querySelector(".name")
 const testAuthor = document.querySelector(".author")
 const testPriclad = document.querySelector(".priclad")
 const classes = ["nazvanie", "author", "priclad"]
-function createBlock({nazvanie, author, priclad}){
+function createBlock({ nazvanie, author, priclad }) {
   const container = document.querySelector(".container")
   container.classList.add('container')
 
@@ -29,7 +29,7 @@ async function loadData() {
     testAuthor.textContent = test.author
     testPriclad.textContent = test.priclad
 
-      createBlock(jsonData.tests[0])    //посмотреть в тимбилах как сделать карточку через хтмл 
+    createBlock(jsonData.tests[0])    //посмотреть в тимбилах как сделать карточку через хтмл 
   } catch (error) {
     console.error('Error fetching JSON:', error);
   }
