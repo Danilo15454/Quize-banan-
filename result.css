@@ -40,6 +40,7 @@ body{
     justify-content: center;
     align-items: center;
     user-select: none;
+    font-size: 28px;
 }
 .otveti{
     width: 100%;
@@ -80,6 +81,7 @@ body{
     display: flex;
     justify-content: left;
     align-items: center;
+    display: none;
 }
 .procentumnicka{
     width: 25%;
@@ -120,7 +122,7 @@ body{
 .more{
     width: 95%;
     height: 10%;
-    background-color: rgb(150, 75, 0);
+    background-color: burlywood;
     margin: auto;
     margin-bottom: 2.5%;
     border-radius: 1vw;

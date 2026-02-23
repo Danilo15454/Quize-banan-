@@ -3,13 +3,14 @@
 let URLparams = new URLSearchParams(window.location.search)
 let bananaType = URLparams.get('banan')
 let time = URLparams.get('time')
-console.log(bananaType)
 
+const mainBlock = document.querySelector('.main')
 const nameBlock = document.querySelector('.nazvanie')
 const mainTimeBlock = document.querySelector('.time')
 const answerBlock = document.querySelector('.otveti')
 const bananaTypeBlock = document.querySelector('.tupoe')
-const procentBlock = document.querySelector('.umnichka')
+// const procentBlock = document.querySelector('.umnichka')
+const firstScaleBlock = document.querySelector('.procenttuposti')
 const scaleBlock = document.querySelector('.procentumnicka')
 const timeBlock = document.querySelector('.obshchee')
 const describeBlock = document.querySelector('.vopros')
@@ -17,17 +18,15 @@ async function loadData() {
   try {
     const response = await fetch('./json.json');
     const jsonData = await response.json(); // Parses the response into a JS object
-    console.log(jsonData);
     let category = jsonData.category
     let questions = jsonData.questions
     let nametest = jsonData.name
-    console.log(questions);
     if (bananaType) {
       closeCheck(time, nametest)
     } else if (category == "opros") {
       oprosCheck(questions, nametest, time)
     } else if (category == "test") {
-      testCheck()
+      testCheck(questions, nametest, time)
     }
   } catch (error) {
     console.error('Error fetching JSON:', error);
@@ -37,7 +36,6 @@ loadData();
 storage = window.localStorage
 let name = localStorage.getItem("banani");
 parse = JSON.parse(name)
-console.log(parse.userAnswer);
 let trueAnswer = 0
 
 const obj = {
@@ -68,22 +66,35 @@ const test = {
 }
 // Работа функции чтобы проверяло правильность ответа и выдавало умный или нет
 function closeCheck(time, nametest) {
-      bananaTypeBlock.textContent = `Ты: ${obj.nespeliyBanan.name}`
-      timeBlock.textContent = `${time} сек`
-      describeBlock.textContent = `Описание: ${obj.nespeliyBanan.desc}`
-      nameBlock.textContent = nametest
+  let bananaTypeBlock = document.createElement('div')
+  bananaTypeBlock.classList.add('tupoe')
+  let describeBlock = document.createElement('div')
+  describeBlock.classList.add('vopros')
+
+  answerBlock.appendChild(bananaTypeBlock)
+  mainTimeBlock.appendChild(describeBlock)
+  bananaTypeBlock.textContent = `Ты: ${obj.nespeliyBanan.name}`
+  timeBlock.textContent = `${time} сек`
+  describeBlock.textContent = `Описание: ${obj.nespeliyBanan.desc}`
+  nameBlock.textContent = nametest
 }
+
 function oprosCheck(questions, nametest, time) {
+  let bananaTypeBlock = document.createElement('div')
+  bananaTypeBlock.classList.add('tupoe')
+  let describeBlock = document.createElement('div')
+  describeBlock.classList.add('vopros')
+
+  answerBlock.appendChild(bananaTypeBlock)
+  mainTimeBlock.appendChild(describeBlock)
   for (let i = 0; i < questions.length; i++) {
     const element = parse.userAnswer[i];
-    console.log(questions[i].correctAnswer)
     if (element == questions[i].correctAnswer) {
       trueAnswer++
     }
   }
   nameBlock.textContent = nametest
   let procents = (trueAnswer / questions.length) * 100
-  procentBlock.textContent = Math.round(procents) + "%"
 
   if (procents <= 17) {
     bananaTypeBlock.textContent = `Ты: ${obj.neBanan.name}`
@@ -101,14 +112,32 @@ function oprosCheck(questions, nametest, time) {
   timeBlock.textContent = `${time} сек`
 }
 
-function testCheck() {
-  // const answerBlock = document.createElement('div')
-  // answerBlock.classList.add('otveti')
+function testCheck(questions, nametest, time) {
+  let procentBlock = document.createElement('div')
+  procentBlock.classList.add('umnichka')
+  let bananaTypeBlock = document.createElement('div')
+  bananaTypeBlock.classList.add('tupoe')
+  let scaleBlock = document.createElement('div')
+  scaleBlock.classList.add('procentumnicka')
+  firstScaleBlock.style.display = "block"
 
+  answerBlock.appendChild(procentBlock)
+  answerBlock.appendChild(bananaTypeBlock)
+  firstScaleBlock.appendChild(scaleBlock)
+
+  for (let i = 0; i < questions.length; i++) {
+    const element = parse.userAnswer[i];
+    if (element == questions[i].correctAnswer) {
+      trueAnswer++
+    }
+  }
+  nameBlock.textContent = nametest
+  let procents = (trueAnswer / questions.length) * 100
+  procentBlock.textContent = Math.round(procents) + "%"
+  scaleBlock.style.width = `${procents}%`
+  bananaTypeBlock.textContent = `${trueAnswer} / ${questions.length}`
+  timeBlock.textContent = `${time} сек`
 }
-
-
-console.log(storage)
 // добавить(недоспелый банан)
 
 
