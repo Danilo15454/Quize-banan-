@@ -1,7 +1,7 @@
 {
-  "category": "опрос",
+  "category": "test",
   "name": "Столицы стран",
-  "shortName": "столица",
+  "shortName": "capitalstest",
   "questions": [
     {
       "question": "Столица Украины?",

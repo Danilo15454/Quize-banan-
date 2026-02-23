@@ -4,31 +4,42 @@ const testAuthor = document.querySelector(".author")
 const testPriclad = document.querySelector(".priclad")
 const container = document.querySelector(".main")
 const classes = ["nazvanie", "tema", "author", "priclad"]
-function createBlock({nazvanie, tema, author, priclad}){
-  console.log(nazvanie)
-  console.log(tema)
-  const newCard = document.createElement('div')
+function createBlock({ nazvanie, tema, author, priclad, shortName }) {
+  const newCard = document.createElement('a')
+  newCard.href = `http://127.0.0.1:5500/index.html?type=${shortName}`
   newCard.classList.add('test1')
+  const newCardInside = document.createElement('div')
+  newCardInside.classList.add('text')
+  newCard.appendChild(newCardInside)
   const h3 = document.createElement('h3')
-  h3.classList.add('nazvanie')
+  h3.classList.add('name')
   h3.textContent = nazvanie
-
-  newCard.appendChild(h3)
+  newCardInside.appendChild(h3)
+  const temablock = document.createElement('p')
+  temablock.classList.add("tema")
+  temablock.textContent = tema
+  newCardInside.appendChild(temablock)
+  const authorblock = document.createElement('p')
+  authorblock.textContent = author
+  authorblock.classList.add("author")
+  newCardInside.appendChild(authorblock)
+  const pricladBlock = document.createElement('p')
+  pricladBlock.classList.add("priclad")
+  pricladBlock.textContent = priclad
+  newCardInside.appendChild(pricladBlock)
   container.appendChild(newCard)
+
+  const but = document.createElement('button')
+  but.textContent = "Перейти"
+  newCard.appendChild(but)
   // Ссылка Передавать какой тест нажат window.location = "http://127.0.0.1:5500/endquest.html?test=banani"}
-  for (let i = 0; i < 3; i++) {
-    const p = document.createElement('p')
-    p.classList.add(classes[i])
-    p.textContent = "muha loh"
-    newCard.appendChild(p)
-  }
+
 }
 async function loadData() {
   try {
     const response = await fetch('./index.json');
     const jsonData = await response.json();
 
-    const test = jsonData.tests[0]
 
     jsonData.tests.forEach(element => {
       createBlock(element)
@@ -38,7 +49,7 @@ async function loadData() {
     // testAuthor.textContent = test.author
     // testPriclad.textContent = test.priclad
 
-          //посмотреть в тимбилах как сделать карточку через хтмл 
+    //посмотреть в тимбилах как сделать карточку через хтмл 
   } catch (error) {
     console.error('Error fetching JSON:', error);
   }

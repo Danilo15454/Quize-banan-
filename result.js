@@ -14,9 +14,11 @@ const firstScaleBlock = document.querySelector('.procenttuposti')
 const scaleBlock = document.querySelector('.procentumnicka')
 const timeBlock = document.querySelector('.obshchee')
 const describeBlock = document.querySelector('.vopros')
+const shortName = "capitalstest"
+// ajkhsfjahgfciuhashmdfcmhjghckmadhjsgcjahsfghcd
 async function loadData() {
   try {
-    const response = await fetch('./bananitest.json');
+    const response = await fetch(`./${shortName}.json`);
     const jsonData = await response.json(); // Parses the response into a JS object
     let category = jsonData.category
     let questions = jsonData.questions
@@ -141,4 +143,4 @@ function testCheck(questions, nametest, time) {
 // добавить(недоспелый банан)
 
 
-document.querySelector('.more').addEventListener('click', () => { window.location = "http://127.0.0.1:5500/newartema.html" })
+document.querySelector('.more').addEventListener('click', () => { window.location = "http://127.0.0.1:5500/indexArtema.html" })

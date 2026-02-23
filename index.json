@@ -1,13 +1,15 @@
 {
     "tests": [
         {
-            "nazvanie": "Bananitest",
+            "nazvanie": "Какой ты банан?",
+            "shortName": "bananitest",
             "tema": "Банан",
             "author": "TeamBilly",
             "priclad": "Приклад запитання: Где растёт банан?"
         },
         {
             "nazvanie": "Столицы стран",
+            "shortName": "capitalstest",
             "tema": "Страны",
             "author": "TeamBilly",
             "priclad": "Приклад запитання: Столица Польши?"

@@ -31,6 +31,7 @@ async function loadData() {
 loadData();
 let startTime = Date.now()
 function switcher(i, questions) {
+  
   answersBlock.textContent = ""
   let answers = questions[questCounter].answers
   const element = questions[questCounter];
@@ -56,7 +57,7 @@ function switcher(i, questions) {
       break
     }
 
-    const element = answers[j].answers;
+    const element = answers[j];
     const ans1Block = document.createElement('div')
     ans1Block.classList.add('answer')
     ans1Block.textContent = element
