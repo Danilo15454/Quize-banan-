@@ -1,7 +1,7 @@
 // const { createElement } = require("react")
 
 let URLparams = new URLSearchParams(window.location.search)
-let bananaType = URLparams.get('banan')
+let bananaType = URLparams.get('proshel')
 let time = URLparams.get('time')
 
 const mainBlock = document.querySelector('.main')
@@ -16,7 +16,7 @@ const timeBlock = document.querySelector('.obshchee')
 const describeBlock = document.querySelector('.vopros')
 async function loadData() {
   try {
-    const response = await fetch('./json.json');
+    const response = await fetch('./bananitest.json');
     const jsonData = await response.json(); // Parses the response into a JS object
     let category = jsonData.category
     let questions = jsonData.questions
