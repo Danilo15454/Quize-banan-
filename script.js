@@ -8,8 +8,8 @@ let URLparams = new URLSearchParams(window.location.search)
 let testType = URLparams.get('type')
 let questCounter = 0
 const test = {
-    userAnswer: [],
-    userChap: []
+  userAnswer: [],
+  userChap: []
 }
 // Влада делает переход на этот сайт и ссылка будет
 // http://127.0.0.1:5500/index.html?test=banani
@@ -30,8 +30,8 @@ async function loadData() {
 }
 loadData();
 let startTime = Date.now()
-function switcher(i, questions) {
-  
+function switcher(questCounter, questions) {
+
   answersBlock.textContent = ""
   let answers = questions[questCounter].answers
   const element = questions[questCounter];
@@ -40,22 +40,16 @@ function switcher(i, questions) {
 
   let obj = localStorage.getItem("banani")
   let parse = ""
-  if (obj == null){
+  if (obj == null) {
     localStorage.setItem("banani", JSON.stringify(test))
-  }else{
+  } else {
     parse = JSON.parse(obj)
 
   }
-  console.log(questions.length)
   console.log(questCounter)
+  console.log(questions.length)
   for (let j = 0; j < answers.length; j++) {
-    if (questCounter == questions.length-1){
-      console.log("1 иф")
-      let endTime = Date.now();
-      let durationInSeconds = Math.floor((endTime - startTime) / 1000);
-      window.location = `http://127.0.0.1:5500/endquest.html?time=${durationInSeconds}`
-      break
-    }
+    console.log(questCounter == questions.length )
 
     const element = answers[j];
     const ans1Block = document.createElement('div')
@@ -63,11 +57,19 @@ function switcher(i, questions) {
     ans1Block.textContent = element
     answersBlock.appendChild(ans1Block)
     ans1Block.addEventListener("click", () => {
+      console.log(questCounter)
       parse.userAnswer[questCounter] = ans1Block.textContent
       localStorage.setItem("banani", JSON.stringify(parse))
       questCounter++
-      questCounterBlock.textContent = `${questCounter + 1} / ${questions.length}`      
-      switcher(i, questions)
+      if (questCounter == questions.length) {
+        console.log("1 иф")
+        let endTime = Date.now();
+        let durationInSeconds = Math.floor((endTime - startTime) / 1000);
+        window.location = `http://127.0.0.1:5500/endquest.html?time=${durationInSeconds}`
+        return
+      }
+      questCounterBlock.textContent = `${questCounter + 1} / ${questions.length}`
+      switcher(questCounter, questions)
     })
   }
 }
@@ -76,20 +78,20 @@ console.log(storage)
 // Недоспелый банан убираем (Не закончил тест)
 // Передача через ссылку неоконченого теста 
 tctBlock.addEventListener('click',
-  function (){
+  function () {
     let endTime = Date.now();
     let durationInSeconds = Math.floor((endTime - startTime) / 1000);
     window.location = `http://127.0.0.1:5500/endquest.html?proshel=false&time=${durationInSeconds}`
   }
 )
 const answer = document.querySelectorAll('.answer');
-answer.forEach((item)=>{
+answer.forEach((item) => {
   item.addEventListener('click', () => {
-      item.classList.add('active');
-  
-      setTimeout(() => {
-        item.classList.remove('active');
-      }, 1000);
+    item.classList.add('active');
+
+    setTimeout(() => {
+      item.classList.remove('active');
+    }, 1000);
   })
 })
 
