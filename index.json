@@ -13,6 +13,27 @@
             "tema": "Страны",
             "author": "TeamBilly",
             "priclad": "Приклад запитання: Столица Польши?"
+        },
+        {
+            "name": "Планеты Солнечной системы",
+            "shortName": "solarsystemtest",
+            "tema": "Планеты",
+            "author": "TeamBilly",
+            "priclad": "Приклад запитання: Какая планета ближе всего к Солнцу?"
+        },
+        {
+            "nazvanie": "Какой ты фиксик",
+            "shortName": "fixiktest",
+            "tema": "Фиксики",
+            "author": "TeamBilly",
+            "priclad": "Приклад запитання: Если что-то не получается ты: "
+        },
+        {
+            "nazvanie": "Животные мира",
+            "shortName": "animalstest",
+            "tema": "Животные",
+            "author": "TeamBilly",
+            "priclad": "Приклад запитання: Какое животное самое большое на планете?"
         }
     ]
-}  
+}
