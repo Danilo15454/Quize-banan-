@@ -2,6 +2,7 @@
 
 let URLparams = new URLSearchParams(window.location.search)
 let bananaType = URLparams.get('proshel')
+let shortName = URLparams.get('shortName')
 let time = URLparams.get('time')
 
 const mainBlock = document.querySelector('.main')
@@ -14,7 +15,6 @@ const firstScaleBlock = document.querySelector('.procenttuposti')
 const scaleBlock = document.querySelector('.procentumnicka')
 const timeBlock = document.querySelector('.obshchee')
 const describeBlock = document.querySelector('.vopros')
-const shortName = "capitalstest"
 // ajkhsfjahgfciuhashmdfcmhjghckmadhjsgcjahsfghcd
 async function loadData() {
   try {

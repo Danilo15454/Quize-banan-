@@ -5,7 +5,7 @@ const questCounterBlock = document.querySelector(".countert")
 const tctBlock = document.querySelector(".tct")
 storage = window.localStorage
 let URLparams = new URLSearchParams(window.location.search)
-let testType = URLparams.get('type')
+let shortName = URLparams.get('type')
 let questCounter = 0
 const test = {
   userAnswer: [],
@@ -17,7 +17,7 @@ const test = {
 // по типу    const response = await fetch('./тутназвание.json');
 async function loadData() {
   try {
-    const response = await fetch(`./${testType}.json`);
+    const response = await fetch(`./${shortName}.json`);
     const jsonData = await response.json(); // Parses the response into a JS object
     console.log(jsonData.questions);
     let questions = jsonData.questions
@@ -65,7 +65,7 @@ function switcher(questCounter, questions) {
         console.log("1 иф")
         let endTime = Date.now();
         let durationInSeconds = Math.floor((endTime - startTime) / 1000);
-        window.location = `http://127.0.0.1:5500/endquest.html?time=${durationInSeconds}`
+        window.location = `http://127.0.0.1:5500/endquest.html?time=${durationInSeconds}&shortName=${shortName}`
         return
       }
       questCounterBlock.textContent = `${questCounter + 1} / ${questions.length}`
@@ -81,7 +81,7 @@ tctBlock.addEventListener('click',
   function () {
     let endTime = Date.now();
     let durationInSeconds = Math.floor((endTime - startTime) / 1000);
-    window.location = `http://127.0.0.1:5500/endquest.html?proshel=false&time=${durationInSeconds}`
+    window.location = `http://127.0.0.1:5500/endquest.html?proshel=false&time=${durationInSeconds}&shortName=${shortName}`
   }
 )
 const answer = document.querySelectorAll('.answer');
