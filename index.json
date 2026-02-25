@@ -15,7 +15,7 @@
             "priclad": "Приклад запитання: Столица Польши?"
         },
         {
-            "name": "Планеты Солнечной системы",
+            "nazvanie": "Планеты Солнечной системы",
             "shortName": "solarsystemtest",
             "tema": "Планеты",
             "author": "TeamBilly",
