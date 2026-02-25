@@ -19,14 +19,15 @@ const describeBlock = document.querySelector('.vopros')
 async function loadData() {
   try {
     const response = await fetch(`./${shortName}.json`);
-    const jsonData = await response.json(); // Parses the response into a JS object
+    const jsonData = await response.json(); // Parses the response into a JS chapect
     let category = jsonData.category
     let questions = jsonData.questions
     let nametest = jsonData.name
+    let chap = jsonData.type
     if (bananaType) {
-      closeCheck(time, nametest)
+      closeCheck(time, nametest, chap)
     } else if (category == "opros") {
-      oprosCheck(questions, nametest, time)
+      oprosCheck(questions, nametest, time, chap)
     } else if (category == "test") {
       testCheck(questions, nametest, time)
     }
@@ -40,34 +41,12 @@ let name = localStorage.getItem("banani");
 parse = JSON.parse(name)
 let trueAnswer = 0
 
-const obj = {
-  umniyBanan: {
-    name: "Умний Банан",
-    desc: "типо умний"
-  },
-  basseBanan: {
-    name: "Базовий банан",
-    desc: "базовый минимум"
-  },
-  tupoiBanan: {
-    name: "Тупой Банан",
-    desc: "тупой и ещё тупее"
-  },
-  neBanan: {
-    name: "Не Банан",
-    desc: "не банан вообще"
-  },
-  nespeliyBanan: {
-    name: "Неспелий Банан",
-    desc: "неспелий лох"
-  },
-}
 const test = {
   userAnswer: [],
   userChap: []
 }
 // Работа функции чтобы проверяло правильность ответа и выдавало умный или нет
-function closeCheck(time, nametest) {
+function closeCheck(time, nametest, chap) {
   let bananaTypeBlock = document.createElement('div')
   bananaTypeBlock.classList.add('tupoe')
   let describeBlock = document.createElement('div')
@@ -75,13 +54,13 @@ function closeCheck(time, nametest) {
 
   answerBlock.appendChild(bananaTypeBlock)
   mainTimeBlock.appendChild(describeBlock)
-  bananaTypeBlock.textContent = `Ты: ${obj.nespeliyBanan.name}`
+  bananaTypeBlock.textContent = `Ты: ${chap.nespeliy.name}`
   timeBlock.textContent = `${time} сек`
-  describeBlock.textContent = `Описание: ${obj.nespeliyBanan.desc}`
+  describeBlock.textContent = `Описание: ${chap.nespeliy.desc}`
   nameBlock.textContent = nametest
 }
 
-function oprosCheck(questions, nametest, time) {
+function oprosCheck(questions, nametest, time, chap) {
   let bananaTypeBlock = document.createElement('div')
   bananaTypeBlock.classList.add('tupoe')
   let describeBlock = document.createElement('div')
@@ -99,17 +78,17 @@ function oprosCheck(questions, nametest, time) {
   let procents = (trueAnswer / questions.length) * 100
 
   if (procents <= 17) {
-    bananaTypeBlock.textContent = `Ты: ${obj.neBanan.name}`
-    describeBlock.textContent = `Описание: ${obj.neBanan.desc}`
+    bananaTypeBlock.textContent = `Ты: ${chap.neBanan.name}`
+    describeBlock.textContent = `Описание: ${chap.ne.desc}`
   } else if (procents >= 18 && procents <= 50) {
-    bananaTypeBlock.textContent = `Ты: ${obj.tupoiBanan.name}`
-    describeBlock.textContent = `Описание: ${obj.tupoiBanan.desc}`
+    bananaTypeBlock.textContent = `Ты: ${chap.tupoiBanan.name}`
+    describeBlock.textContent = `Описание: ${chap.tupoi.desc}`
   } else if (procents >= 51 && procents <= 84) {
-    bananaTypeBlock.textContent = `Ты: ${obj.basseBanan.name}`
-    describeBlock.textContent = `Описание: ${obj.basseBanan.desc}`
+    bananaTypeBlock.textContent = `Ты: ${chap.basseBanan.name}`
+    describeBlock.textContent = `Описание: ${chap.basse.desc}`
   } else if (procents >= 85 && procents <= 100) {
-    bananaTypeBlock.textContent = `Ты: ${obj.umniyBanan.name}`
-    describeBlock.textContent = `Описание: ${obj.umniyBanan.desc}`
+    bananaTypeBlock.textContent = `Ты: ${chap.umniyBanan.name}`
+    describeBlock.textContent = `Описание: ${chap.umniy.desc}`
   }
   timeBlock.textContent = `${time} сек`
 }

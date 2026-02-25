@@ -1,7 +1,7 @@
 {
   "category": "test",
   "name": "Какая ты ошибка Windows?",
-  "shortName": "windows_error_test",
+  "shortName": "windowserrortest",
   "questions": [
     {
       "question": "Что происходит, когда появляется ошибка 'Blue Screen of Death'?",

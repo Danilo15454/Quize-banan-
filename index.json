@@ -34,6 +34,27 @@
             "tema": "Животные",
             "author": "TeamBilly",
             "priclad": "Приклад запитання: Какое животное самое большое на планете?"
+        },
+        {
+            "nazvanie": "Кошачий тест",
+            "shortName": "cattest",
+            "tema": "Животные",
+            "author": "TeamBilly",
+            "priclad": "Приклад запитання: Какого цвета обычно кошачья шерсть?"
+        },
+        {
+            "nazvanie": "Математика",
+            "shortName": "mathtest",
+            "tema": "Математика",
+            "author": "TeamBilly",
+            "priclad": "Приклад запитання: 7 + 5 ?"
+        },
+        {
+            "nazvanie": "Животные мира",
+            "shortName": "animalstest",
+            "tema": "Животные",
+            "author": "TeamBilly",
+            "priclad": "Приклад запитання: Какое животное самое большое на планете?"
         }
     ]
 }
