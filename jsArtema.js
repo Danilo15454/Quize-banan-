@@ -3,6 +3,13 @@ const testTema = document.querySelector(".tema")
 const testAuthor = document.querySelector(".author")
 const testPriclad = document.querySelector(".priclad")
 const container = document.querySelector(".main")
+
+let name = localStorage.getItem("banani");
+parse = JSON.parse(name)
+parse.userAnswer = []
+localStorage.setItem("banani", JSON.stringify(parse))
+
+
 const classes = ["nazvanie", "tema", "author", "priclad"]
 function createBlock({ nazvanie, tema, author, priclad, shortName }) {
   const newCard = document.createElement('a')

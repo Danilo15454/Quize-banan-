@@ -5,6 +5,8 @@ let bananaType = URLparams.get('proshel')
 let shortName = URLparams.get('shortName')
 let time = URLparams.get('time')
 
+
+
 const mainBlock = document.querySelector('.main')
 const nameBlock = document.querySelector('.nazvanie')
 const mainTimeBlock = document.querySelector('.time')
@@ -18,18 +20,20 @@ const describeBlock = document.querySelector('.vopros')
 // ajkhsfjahgfciuhashmdfcmhjghckmadhjsgcjahsfghcd
 async function loadData() {
   try {
-    const response = await fetch(`./${shortName}.json`);
+    const response = await fetch(`./test/${shortName}.json`);
     const jsonData = await response.json(); // Parses the response into a JS chapect
     let category = jsonData.category
     let questions = jsonData.questions
     let nametest = jsonData.name
     let chap = jsonData.type
-    if (bananaType) {
-      closeCheck(time, nametest, chap)
-    } else if (category == "opros") {
-      oprosCheck(questions, nametest, time, chap)
-    } else if (category == "test") {
-      testCheck(questions, nametest, time)
+    if (category == "opros") {
+      if (bananaType) {
+        closeCheck(time, nametest, chap)
+      } else {
+        oprosCheck(questions, nametest, time, chap)
+      }
+    }else if (category == "test") {
+        testCheck(questions, nametest, time)
     }
   } catch (error) {
     console.error('Error fetching JSON:', error);
@@ -41,10 +45,6 @@ let name = localStorage.getItem("banani");
 parse = JSON.parse(name)
 let trueAnswer = 0
 
-const test = {
-  userAnswer: [],
-  userChap: []
-}
 // Работа функции чтобы проверяло правильность ответа и выдавало умный или нет
 function closeCheck(time, nametest, chap) {
   let bananaTypeBlock = document.createElement('div')
@@ -78,16 +78,16 @@ function oprosCheck(questions, nametest, time, chap) {
   let procents = (trueAnswer / questions.length) * 100
 
   if (procents <= 17) {
-    bananaTypeBlock.textContent = `Ты: ${chap.neBanan.name}`
+    bananaTypeBlock.textContent = `Ты: ${chap.ne.name}`
     describeBlock.textContent = `Описание: ${chap.ne.desc}`
   } else if (procents >= 18 && procents <= 50) {
-    bananaTypeBlock.textContent = `Ты: ${chap.tupoiBanan.name}`
+    bananaTypeBlock.textContent = `Ты: ${chap.tupoi.name}`
     describeBlock.textContent = `Описание: ${chap.tupoi.desc}`
   } else if (procents >= 51 && procents <= 84) {
-    bananaTypeBlock.textContent = `Ты: ${chap.basseBanan.name}`
+    bananaTypeBlock.textContent = `Ты: ${chap.basse.name}`
     describeBlock.textContent = `Описание: ${chap.basse.desc}`
   } else if (procents >= 85 && procents <= 100) {
-    bananaTypeBlock.textContent = `Ты: ${chap.umniyBanan.name}`
+    bananaTypeBlock.textContent = `Ты: ${chap.umniy.name}`
     describeBlock.textContent = `Описание: ${chap.umniy.desc}`
   }
   timeBlock.textContent = `${time} сек`
@@ -122,4 +122,6 @@ function testCheck(questions, nametest, time) {
 // добавить(недоспелый банан)
 
 
-document.querySelector('.more').addEventListener('click', () => { window.location = "http://127.0.0.1:5500/indexArtema.html" })
+document.querySelector('.more').addEventListener('click', () => { 
+  window.location = "http://127.0.0.1:5500/indexArtema.html" 
+})

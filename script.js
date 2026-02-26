@@ -9,7 +9,6 @@ let shortName = URLparams.get('type')
 let questCounter = 0
 const test = {
   userAnswer: [],
-  userChap: []
 }
 // Влада делает переход на этот сайт и ссылка будет
 // http://127.0.0.1:5500/index.html?test=banani
@@ -17,11 +16,9 @@ const test = {
 // по типу    const response = await fetch('./тутназвание.json');
 async function loadData() {
   try {
-    const response = await fetch(`./${shortName}.json`);
+    const response = await fetch(`./test/${shortName}.json`);
     const jsonData = await response.json(); // Parses the response into a JS object
-    console.log(jsonData.questions);
     let questions = jsonData.questions
-    console.log(jsonData.questions)
     questCounterBlock.textContent = `${questCounter + 1} / ${questions.length}`
     switcher(questCounter, questions)
   } catch (error) {
@@ -34,8 +31,6 @@ function switcher(questCounter, questions) {
 
   answersBlock.textContent = ""
   let answers = questions[questCounter].answers
-  const element = questions[questCounter];
-  // console.log(element)
   voprosBlock.textContent = questions[questCounter].question
 
   let obj = localStorage.getItem("banani")
@@ -46,10 +41,7 @@ function switcher(questCounter, questions) {
     parse = JSON.parse(obj)
 
   }
-  console.log(questCounter)
-  console.log(questions.length)
   for (let j = 0; j < answers.length; j++) {
-    console.log(questCounter == questions.length )
 
     const element = answers[j];
     const ans1Block = document.createElement('div')
@@ -57,12 +49,10 @@ function switcher(questCounter, questions) {
     ans1Block.textContent = element
     answersBlock.appendChild(ans1Block)
     ans1Block.addEventListener("click", () => {
-      console.log(questCounter)
       parse.userAnswer[questCounter] = ans1Block.textContent
       localStorage.setItem("banani", JSON.stringify(parse))
       questCounter++
       if (questCounter == questions.length) {
-        console.log("1 иф")
         let endTime = Date.now();
         let durationInSeconds = Math.floor((endTime - startTime) / 1000);
         window.location = `http://127.0.0.1:5500/endquest.html?time=${durationInSeconds}&shortName=${shortName}`
@@ -73,7 +63,6 @@ function switcher(questCounter, questions) {
     })
   }
 }
-console.log(storage)
 // добавить(недоспелый банан)
 // Недоспелый банан убираем (Не закончил тест)
 // Передача через ссылку неоконченого теста 

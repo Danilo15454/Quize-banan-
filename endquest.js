@@ -1,7 +1,6 @@
 const scene = document.querySelector('.MainEndDiv');
 const textblock = document.querySelector('.textblock');
 const pencilImg = ['img/pencil.svg', 'img/pencil2.svg', 'img/pencil3.svg'];
-const button = document.getElementById('toggle');
 const locate = window.location.search
 console.log(locate)
 const pencils = [];
@@ -62,7 +61,6 @@ function animate() {
 document.addEventListener('DOMContentLoaded', () => {
   if (!isRunning) {
     isRunning = true;
-    button.textContent = 'Stop';
     
     // обновляем случайный поворот всех карандашей
     pencils.forEach(p => {
@@ -75,16 +73,9 @@ document.addEventListener('DOMContentLoaded', () => {
     timeoutId = setTimeout(() => {
       isRunning = false;
       cancelAnimationFrame(animationId);
-      button.textContent = 'Start';
       window.location = `http://127.0.0.1:5500/result.html${locate}`
     }, 3000);
 
-  } else {
-    // если нажали "Stop" вручную
-    isRunning = false;
-    cancelAnimationFrame(animationId);
-    button.textContent = 'Start';
-    if (timeoutId) clearTimeout(timeoutId);
   }
 
   textblock.classList.add('newtrans')

@@ -50,11 +50,11 @@
             "priclad": "Приклад запитання: 7 + 5 ?"
         },
         {
-            "nazvanie": "Животные мира",
-            "shortName": "animalstest",
-            "tema": "Животные",
+            "nazvanie": "ошибки Windows",
+            "shortName": "windowserrortest",
+            "tema": "Програми",
             "author": "TeamBilly",
-            "priclad": "Приклад запитання: Какое животное самое большое на планете?"
+            "priclad": "Приклад запитання: Ошибка 'DLL не найден' связана с отсутствием:"
         }
     ]
 }
