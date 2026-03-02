@@ -1,155 +1,88 @@
-body{
+body {
     margin: 0;
-}
-.top{
-    width: 100vw;
-    height: 5vw;
-    background-color: rgb(127, 255, 212);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.logo{
-    width: 5%;
-    height: 80%;
-    background-color: rgb(148.8, 200.1, 198.8);
-    border-radius: 1vw;
-}
-.main{
-    width: 80vw;
-    height: 45vw;
-    background-color: rgb(200, 200, 200);
-    margin: auto;
-    margin-top: 2.5vw;
-    border-radius: 1vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; /* ? */
-    font-family: Comic Sans MS, Comic Sans;
-    font-size: larger;
-}
-.nazvanie{
-    width: 95%;
-    height: 25%;
-    background-color: rgb(100, 200, 200);
-    /* margin: auto; */
-    margin-top: 2.5%;
-    border-radius: 1vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    user-select: none;
-    font-size: 28px;
-}
-.otveti{
-    width: 100%;
-    height: 10%;
-    display: flex;
-    justify-content: baseline;
-}
-.umnichka{
-    width: 45%;
-    height: 100%;
-    background-color: rgb(100, 200, 100);
-    margin: auto;
-    margin-top: 2.5%;
-    border-radius: 1vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    user-select: none;
-}
-.tupoe{
-    width: 45%;
-    height: 100%;
-    background-color: rgb(200, 100, 100);
-    margin: auto;
-    margin-top: 2.5%;
-    border-radius: 1vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    user-select: none;
-}
-.procenttuposti{
-    width: 95%;
-    height: 10%;
-    background-color: rgb(255, 0, 0);
-    margin-top: 5%;
-    border-radius: 1vw;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    display: none;
-}
-.procentumnicka{
-    width: 25%;
-    height: 100%;
-    background-color: rgb(0, 255, 0);
-    border-radius: 1vw;
-}
-.time{
-    width: 100%;
-    height: 10%;
-    display: flex;
-    /* justify-content: baseline; */
-    /* margin: auto; */
-    margin-top: 5%;
-}
-.obshchee{
-    width: 45%;
-    height: 100%;
-    background-color: rgb(240, 230, 140);;
-    margin: auto;
-    border-radius: 1vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    user-select: none;
-}
-.vopros{
-    width: 45%;
-    height: 100%;
-    background-color: rgb(240, 230, 140);
-    margin: auto;
-    border-radius: 1vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    user-select: none;
-}
-.more{
-    width: 95%;
-    height: 10%;
-    background-color: burlywood;
-    margin: auto;
-    margin-bottom: 2.5%;
-    border-radius: 1vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.uppermore{
-    width: 100%;
-    height: 100%;
-    background-color: rgb(255, 200, 0);
-    /* margin: auto;
-    margin-bottom: 2.5%; */
-    border-radius: 1vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.1s;
-    user-select: none;
-}
-.uppermore:hover{
-    background-color: rgb(255, 150, 0);
-    transition: all 0.1s;
-}
-.uppermore:active{
-    width: 97.5%;
-    height: 85%;
-    transition: all 0.1s;
+    background-color: #f0f4f7;
+    background-image: radial-gradient(#d1d1d1 1px, transparent 1px);
+    background-size: 40px 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.wrapper { display: flex; flex-direction: column; min-height: 100vh; }
+
+/* ХЕДЕР И ФУТЕР (Копия стиля) */
+.header { background-color: #f9d71c; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+.header-top { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; }
+.logo { font-weight: bold; font-size: 22px; color: #333; }
+.header-title { font-weight: bold; color: #2b4a78; font-size: 18px; }
+.progress-bar-container { height: 15px; background: #2b4a78; position: relative; }
+.progress-bar { height: 100%; background: #f9d71c; }
+
+/* КАРТОЧКА РЕЗУЛЬТАТА */
+.container { flex: 1; display: flex; justify-content: center; align-items: center; padding: 40px 20px; }
+.result-card {
+    background: white;
+    width: 100%;
+    max-width: 700px;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    text-align: center;
+    border: 5px solid #f9d71c;
+}
+
+.nazvanie { color: #2b4a78; font-size: 32px; margin-bottom: 30px; }
+
+.otveti { display: flex; justify-content: center; gap: 20px; margin-bottom: 30px; flex-wrap: wrap; }
+
+/* Стили для плашек результатов */
+.umnichka, .tupoe {
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 20px;
+    min-width: 150px;
+}
+.umnichka { background-color: #5cb85c; color: white; } /* Зеленый - успех */
+.tupoe { background-color: #2b4a78; color: white; }   /* Синий - инфо */
+
+/* Шкала */
+.procenttuposti {
+    width: 100%;
+    height: 25px;
+    background-color: #e0e0e0;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 20px 0;
+    display: none; /* Включается через JS */
+}
+.procentumnicka {
+    height: 100%;
+    background: linear-gradient(90deg, #f9d71c, #f39c12);
+    width: 0%;
+    transition: width 1s ease-out;
+}
+
+.time-info { margin: 30px 0; }
+.obshchee { font-size: 18px; color: #7f8c8d; margin-bottom: 10px; }
+.vopros-desc { font-style: italic; font-size: 20px; color: #333; line-height: 1.5; padding: 0 20px; }
+
+/* Кнопка */
+.more {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+.more:hover { background-color: #e67e22; transform: scale(1.05); }
+
+/* Футер */
+.footer { background: #2b4a78; color: white; padding: 40px 0 20px; margin-top: 40px; }
+.footer-content { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; padding: 0 20px; }
+.footer-section h3 { border-bottom: 2px solid #f9d71c; padding-bottom: 10px; margin-bottom: 15px; font-size: 16px; }
+.footer-section p, .footer-section li, .footer-section a { color: #bdc3c7; font-size: 13px; text-decoration: none; }
+.footer-bottom { text-align: center; margin-top: 30px; color: #7f8c8d; font-size: 11px; }

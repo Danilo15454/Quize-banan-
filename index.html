@@ -1,27 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banana Quiz</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-top">
+                <div class="logo">🍌 NaBanan</div>
+                <div class="countert">Загрузка...</div>
+                <div class="tct">
+                    <button class="exit-btn">Покинуть миссию 🏃‍♂️</button>
+                </div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="quiz-progress"></div>
+            </div>
+        </header>
 
-  <div class="div">
-    <div class="planka">
-      <div class="countert"></div>
-      <div class="tct"> <img class="tct2" src="img/image.png " alt=""></div>
+        <main class="container">
+            <div class="quiz-box">
+                <div class="vopros">Загружаем вопрос...</div>
+                <div class="answers">
+                    </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>О НАС</h3>
+                    <p>Мы — секретная лаборатория по изучению спелости бананов под руководством Грю.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>КОНТАКТЫ</h3>
+                    <p>📍 Секретный бункер</p>
+                    <p>📞 352-77-99-BANANA</p>
+                </div>
+                <div class="footer-section">
+                    <h3>СОЦИАЛЬНЫЕ СЕТИ</h3>
+                    <div class="social-icons">📸 🐦 📺</div>
+                </div>
+                <div class="footer-section">
+                    <h3>ССЫЛКИ</h3>
+                    <ul>
+                        <li><a href="#">Правила Грю</a></li>
+                        <li><a href="#">Запас бананов</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">© Copyright all Minion Corporation</div>
+        </footer>
     </div>
-    <div class="vopros"></div>
-    <div class="answers"></div>
-  </div>
 
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
