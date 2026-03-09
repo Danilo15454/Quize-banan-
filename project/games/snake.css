@@ -1,0 +1,16 @@
+table{
+    border: 2px blueviolet solid;
+        border-spacing: 0;
+}
+tr{
+    width: 600px;
+    height: 10px;
+}
+td{
+    height: 10px;
+    border: 0.5px rgb(34, 0, 126) solid;
+    width: 10px;
+}
+.score{
+    align-items: center;
+}
