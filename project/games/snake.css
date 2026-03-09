@@ -1,0 +1,12 @@
+table{
+    border: 2px blueviolet solid;
+}
+tr{
+    width: 600px;
+    height: 10px;
+}
+td{
+    height: 10px;
+    border: 2px rgb(34, 0, 126) solid;
+    width: 10px;
+}
