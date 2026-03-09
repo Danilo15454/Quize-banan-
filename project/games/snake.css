@@ -1,16 +1,73 @@
 table{
     border: 2px blueviolet solid;
-        border-spacing: 0;
+    border-spacing: 0px;
 }
 tr{
     width: 600px;
     height: 10px;
 }
 td{
-    height: 10px;
-    border: 0.5px rgb(34, 0, 126) solid;
-    width: 10px;
+    height: 20px;
+    border: 0.5px rgb(184, 159, 255) solid;
+    width: 20px;
 }
-.score{
-    align-items: center;
+td {
+  width: 20px;
+  height: 20px;
+}
+
+/* желтые клетки */
+tr:nth-child(odd) td:nth-child(even),
+tr:nth-child(even) td:nth-child(odd) {
+  background: rgb(212, 78, 199);
+}
+
+/* синие клетки */
+tr:nth-child(odd) td:nth-child(odd),
+tr:nth-child(even) td:nth-child(even) {
+  background: rgb(229, 151, 217);
+}
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#ff89f3;
+    color:rgb(196, 40, 40);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.game-header{
+    margin-top:20px;
+    padding:15px 30px;
+    background:#ea00ff;
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    gap:40px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.4);
+}
+
+.game-header h1{
+    margin:0;
+    font-size:28px;
+    color:#8d5499;
+}
+
+.score-box{
+    text-align:center;
+    background:#e185eb;
+    padding:10px 20px;
+    border-radius:10px;
+}
+
+.score-box span{
+    font-size:14px;
+    color:#b114b3;
+}
+
+#score{
+    font-size:24px;
+    font-weight:bold;
+    color:#150127;
 }
