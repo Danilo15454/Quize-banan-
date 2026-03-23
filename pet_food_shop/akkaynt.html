@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вхід</title>
+    <link rel="stylesheet" href="akkaynt.css">
+</head>
+<body>
+     <header class="header">
+        <div class="empty">
+        </div>
+    <div class="main-links">
+      <div class="nav-links">
+        <a href="" class="link">Кошик</a>
+        <a href="" class="link">Інформація</a>
+        <a href="" class="link">Контакти</a>
+      </div>
+    </div>
+  </header>
+    <div class="persha">
+        <div class="NameB">
+        <button class="NameR">Вхід або Регістрація</button>
+        </div>
+        <div class="formphone">
+            <form class="ввввв" id="login" method="POST" action="/api/save-phone">
+                <input type="tel" required placeholder="E-mail або номер телефону" />
+                <input type="pass" required placeholder="Пароль" class="pass" />
+                <button class="button" type="submit">Продовжити</button>
+            </form>
+    <form id="registration" method="POST" action="/api/save-phone" class="hide">
+    <input type="tel" placeholder="E-mail або номер телефону" id="regPhone" required />
+    <input type="text" placeholder="Имя" id="regName" required />
+    <input type="text" placeholder="Фамилия" id="regSurname" required />
+    <input type="password" placeholder="Пароль" id="regPassword" required />
+    <input type="password" placeholder="Повторіть пароль" id="regPassword2" required />
+    <button class="button2" type="submit">Продовжити</button>
+</form>
+
+            
+            <h1 class="or">або</h1>
+    
+            <div class="logoButton">
+                <button class="buttonGoogle">
+                    <img class="google" src="img/300221.png" alt="">Google
+                </button>
+                <button class="buttonApple">
+                    <img class="Apple" src="img/apple.png" alt="">Apple
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="blockFirst">        
+    </div>
+</body>
+</html>
