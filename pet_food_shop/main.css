@@ -57,14 +57,14 @@
   }
   .food1,.food2,.food3,.food4,.food5{
     background-color: rgb(222, 222, 222);
-    height: 320px;
+    height: 330px;
     width: 250px;
     border: 5px black;
     border-radius: 10px;
   }
   .line{
     height: 380px;
-    width: 1050px;
+    width: 1065px;
     display: flex;
     align-items: center;
     background: #10b981;
@@ -74,7 +74,7 @@
     border-radius: 5px;
   }
   .food1{
-    margin-left: 20px;
+    margin-left: 15px;
   }
   .food5{
     margin-right: 20px;
@@ -109,6 +109,8 @@
   }
   .buy{
     width: 190px;
-    margin-top: 20px;
+    margin-left: 5px;
+  }
+  .text{
     margin-left: 5px;
   }
