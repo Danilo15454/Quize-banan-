@@ -46,7 +46,7 @@
   margin-right: 152px;
 }
 
-.signup-btn:hover {
+.signup:hover {
   background-color: #059669;
 }
 
@@ -58,90 +58,85 @@ body {
   display: flex;
 }
 
-.food1,
-.food2,
-.food3,
-.food4,
-.food5 {
-  background-color: rgb(222, 222, 222);
-  height: 350px;
-  width: 250px;
-  border: 5px black;
+.product-card {
+  display: flex;
+  background: #fff;
   border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 900px;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 50px;
 }
 
-.line {
-  height: 400px;
-  width: 1075px;
+.wrapper {
   display: flex;
   align-items: center;
-  background: #10b981;
-  margin-top: 30px;
-  gap: 10px;
-  border-radius: 5px;
-}
-
-.food1 {
-  margin-left: 18px;
-}
-
-.food5 {
-  margin-right: 20px;
-}
-
-.variants {
-  height: 125px;
-  width: 200px;
-  margin-top: 30px;
-  display: flex;
+  justify-content: center;
   flex-direction: column;
 }
 
-main {
+.product-image {
+  flex: 1;
+  padding: 20px;
+}
+
+.product-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.product-info {
+  flex: 2;
+  padding: 20px;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-button:hover {
-  background-color: #727478;
+.product-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.variant {
-  border-color: black;
-  margin-bottom: 5px;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 200px;
-}
-
-img {
-  width: 200px;
-  height: 220px;
+.availability {
   display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #27ae60;
+  margin-bottom: 10px;
 }
 
-.buy {
+.status-icon {
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.product-code {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-size: 26px;
+  color: #27ae60;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.buy-button {
   background: #27ae60;
   color: white;
+  padding: 15px;
   font-size: 18px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  width: 190px;
-  margin-left: 5px;
-  height: 45px;
+  margin-top: 10px;
 }
 
-.text {
-  margin-left: 5px;
-}
-
-.buy:hover {
+.buy-button:hover {
   background: #219150;
-}
-
-.cupyty {
-  margin: 0;
-}
-p{
-  margin-right: 110px;
 }
