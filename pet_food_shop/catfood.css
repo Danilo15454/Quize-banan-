@@ -71,7 +71,7 @@ body {
 
 .line {
   height: 400px;
-  width: 1075px;
+  width: 1065px;
   display: flex;
   align-items: center;
   background: #10b981;
@@ -142,6 +142,44 @@ img {
 .cupyty {
   margin: 0;
 }
+
 p{
   margin-right: 110px;
+}
+
+.footer {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 50px 20px 20px;
+  margin-top: 200px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.footer-nav ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.footer-nav li {
+  margin-bottom: 10px;
+}
+
+.footer-nav a {
+  color: #ffffff;
+  opacity: 0.8;
+  font-size: 0.95em;
+}
+
+.footer-nav a:hover {
+  opacity: 1;
+  color: #007bff;
 }
