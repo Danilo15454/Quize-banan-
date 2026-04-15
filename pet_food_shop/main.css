@@ -153,13 +153,7 @@ p {
 }
 
 .footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .footer-nav ul {
@@ -175,6 +169,8 @@ p {
   color: #ffffff;
   opacity: 0.8;
   font-size: 0.95em;
+  display: flex;
+  justify-content: center;
 }
 
 .footer-nav a:hover {
