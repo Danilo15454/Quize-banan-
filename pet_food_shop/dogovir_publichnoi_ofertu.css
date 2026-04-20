@@ -59,27 +59,14 @@ body {
   display: flex;
 }
 
-.catalog {
-    display: flex;
-    justify-content: center;
-    gap: 200px;
-    margin-top: 150px;
+.margin{
+    width:1170px; 
+    height: 1050px;
+    margin-left: 90px;
 }
-
-.dog,
-.cat,
-.aczii {
-    width: 150px;
-    height: 150px;
-}
-
-img {
-    width: 200px;
-    height: 200px;
-}
-
-a {
-    text-decoration: none;
+.text{
+    margin-top: 20px;
+    margin-left: 20px;
     color: #fff;
 }
 
@@ -87,7 +74,7 @@ a {
   background-color: #343a40;
   color: #ffffff;
   padding: 50px 20px 20px;
-  margin-top: 200px;
+  margin-top: 1750px;
 }
 
 .footer-content {
