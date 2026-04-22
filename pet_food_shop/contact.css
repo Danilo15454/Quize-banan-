@@ -19,7 +19,7 @@
   color: #fff;
 }
 
-.nav-links a:hover{
+.nav-links a:hover {
   color: #acacac;
 }
 
@@ -59,15 +59,16 @@ body {
   display: flex;
 }
 
-.margin{
-    width:1170px; 
-    height: 1050px;
-    margin-left: 90px;
+.margin {
+  width: 1170px;
+  height: 1050px;
+  margin-left: 90px;
 }
-.text{
-    margin-top: 20px;
-    margin-left: 20px;
-    color: #fff;
+
+.text {
+  margin-top: 20px;
+  margin-left: 20px;
+  color: #fff;
 }
 
 .footer {
