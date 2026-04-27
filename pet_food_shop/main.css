@@ -50,9 +50,23 @@
   background-color: #059669;
 }
 
+#Theme{
+  margin-right: 20px;
+}
+
+:root{
+  background-color: #fff;
+  -webkit-text-fill-color: #000;
+}
+body.dark-theme{
+  background-color: #1a1a1a;
+  -webkit-text-fill-color: #f0f0f0;
+}
+
 body {
   margin: 0;
-  background-color: #545e68;
+  background-color: div(background-color);
+  color: div(-webkit-text-fill-color);
 }
 
 .empty {
