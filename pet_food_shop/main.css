@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #343a40;
+  background-color: var(--card-background);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
   padding-top: 5px;
   padding-bottom: 5px;
@@ -16,14 +16,14 @@
   text-decoration: none;
   font-size: 16px;
   padding: 30px;
-  color: #fff;
+  color: var(--main-text);
 }
 
-.nav-links a:hover {
+.nav-links:hover {
   color: #acacac;
 }
 
-.form-links a {
+.form-link {
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
@@ -50,23 +50,33 @@
   background-color: #059669;
 }
 
-#Theme{
+#Theme {
   margin-right: 20px;
+  background-color: var(--accent-color);
+  color: var(--button-text-color);
+  border: none;
 }
 
-:root{
-  background-color: #fff;
-  -webkit-text-fill-color: #000;
+:root {
+  --main-background: #e2e2e2;
+  --main-text: #000;
+  --card-background: #a5a5a5;
+  --accent-color: #393939;
+  --button-text-color: #f0f0f0;
 }
-body.dark-theme{
-  background-color: #1a1a1a;
-  -webkit-text-fill-color: #f0f0f0;
+
+body.dark-theme {
+  --main-background: #1a1a1a;
+  --main-text: #f0f0f0;
+  --card-background: #343a40;
+  --accent-color: #c4c4c4;
+  --button-text-color: #000;
 }
 
 body {
   margin: 0;
-  background-color: div(background-color);
-  color: div(-webkit-text-fill-color);
+  background-color: var(--main-background);
+  color: var(--main-text);
 }
 
 .empty {
@@ -78,16 +88,16 @@ body {
 .food3,
 .food4,
 .food5 {
-  background-color: rgb(222, 222, 222);
-  height: 350px;
-  width: 250px;
+  background-color: var(--card-background);
+  height: 400px;
+  width: 200px;
   border: 5px black;
   border-radius: 10px;
 }
 
 .line {
-  height: 400px;
-  width: 1065px;
+  height: 440px;
+  width: 1165px;
   display: flex;
   align-items: center;
   background: #10b981;
@@ -97,16 +107,12 @@ body {
 }
 
 .food1 {
-  margin-left: 18px;
-}
-
-.food5 {
-  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .variants {
   height: 125px;
-  width: 200px;
+  width: 170px;
   margin-top: 30px;
   display: flex;
   flex-direction: column;
@@ -121,11 +127,13 @@ button:hover {
 }
 
 .variant {
-  border-color: black;
   margin-bottom: 5px;
   border-radius: 5px;
   cursor: pointer;
-  width: 200px;
+  width: 170px;
+  background-color: var(--card-background);
+  color: var(--main-text);
+  text-align: left;
 }
 
 img {
@@ -143,8 +151,10 @@ img {
   border-radius: 5px;
   cursor: pointer;
   width: 190px;
-  margin-left: 5px;
   height: 45px;
+  margin-left: 5px;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .text {
@@ -160,7 +170,8 @@ img {
 }
 
 p {
-  margin-right: 110px;
+  margin-right: 60px;
+  margin-left: 5px;
 }
 
 .footer {
