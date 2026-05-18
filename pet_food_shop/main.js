@@ -12,3 +12,16 @@ btn.addEventListener('click',function() {
     }
     localStorage.setItem('theme', theme)
 } )
+
+
+// const butn = document.getElementById('btn');
+// const inp = document.getElementById('input');
+
+// function press() {
+//     const inpValue = inp.Value;
+//     const li = document.createElement('li');
+//     const list = document.getElementsByid('ul');
+//     li.textContent = inpValue;
+//     list.appendChild(li);
+//     inp.Value = '';
+// }
