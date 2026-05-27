@@ -47,3 +47,42 @@ btn.addEventListener('click',function() {
 //     obj.age = {age}
 //     obj.weight = {weight}
 //     console.log (obj)
+
+// const numArr = [10,4,7,2,5];
+// const numArr2 = []
+// for (let i = 0; i < numArr.length; i++) {
+//     const element = numArr[i];
+//     if (numArr >= 5 ) {
+//         numArr2.push(element)
+//     }
+// }
+
+// const products = [{
+//     type: 'Video',
+//     price: '300 $'
+// },
+// {
+//     type: 'Proc',
+//     price: '200 $'
+// },
+// {
+//     type: 'Video',
+//     price: '250 $'
+// },
+// {
+//     type: 'Proc',
+//     price: '1500 $'
+// },
+// {
+//     type: 'Video',
+//     price: '100 $'
+// },
+// {
+//     type: 'Proc',
+//     price: '350 $'
+// },
+// ];
+
+// const filtredProd = products.filter((el) => {
+//     return el.type === 'Proc' && el.price < 300
+// })
