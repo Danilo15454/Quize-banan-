@@ -1,6 +1,3 @@
-// const butn = document.getElementById('btn');
-// const inp = document.getElementById('input');
-
 // function press() {
 //     const inpValue = inp.Value;
 //     const li = document.createElement('li');
@@ -73,32 +70,16 @@
 
 
 
-// const emailInput = document.getElementById('mail');
-// const passwordInput = document.getElementById('pass');
-// const submit = document.getElementById('sub');
-// submit.addEventListener('click' , () => {
-//     const email = emailInput.value.trim();
-//     const password = passwordInput.value.trim();
-//     const acheck = email.includes('@')
-//     const dotcheck = email.includes('.')
-//     if (!acheck || !dotcheck) {
-//         alert('nema @ abo .');
-//         return
-//     };
-//     if (password.length < 8) {
-//         alert('malo');
-//         return
-//     };
-// });
+// Акаунт пошта і пароль з валідацією
 
-const login = "fhbgfdjgh@ddd.hbgjk";
-const pass = "";
+const login = document.getElementById('mail');
+const pass = document.getElementById('pass');
 function validatorPass(login, password) {
-    let login1;
-    let pass1;
+    let alogin;
+    let apass;
     if (login.length !== 0) {
-        const atsignindex = login.indexOf("@");
-        const pointindex = login.indexOf(".");
+        const atsignindex = login.indexOf('@');
+        const pointindex = login.indexOf('.');
         if (
             atsignindex !== -1 &&
             pointindex !== -1 &&
@@ -106,18 +87,20 @@ function validatorPass(login, password) {
             && login.slice(atsignindex + 1, pointindex).length > 0
             && login.slice(pointindex + 1, login.length).length > 0
         ){
-            login1 = true
-        } else login1 = false
+            alogin = true
+        } else alogin = false
     };
     const hasNum = /\d/.test(password);
     const uppercase = /[A-Z]/.test(password);
     const islengthcorrect = password.length >= 8;
-    if (hasNum && uppercase && islengthcorrect) {
-        pass1 = true
-    }else pass1 = false
+    const hasUnderscore = password.includes("_")
+    if (hasNum && uppercase && islengthcorrect && hasUnderscore) {
+        apass = true
+    }else apass = false
 
-    return login1 && pass1 ? true : false;
+    return alogin && apass ? true : false;
 };
-const result = validatorPass(login, pass);
-console.log(result);
+const submit = document.getElementById('sub')
+submit.addEventListener('click', validatorPass(login, pass));
+console.log(submit);
 
