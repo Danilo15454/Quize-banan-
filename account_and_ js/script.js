@@ -68,39 +68,56 @@
 //     return el.type === 'Proc' && el.price < 300
 // })
 
+// class Human{
+//     bd = [];
+//     constructor(name1,age1,weight1){
+//         this.name = name1;
+//         this.age = age1;
+//     }
+//     get(){
+//         return this.bd;
+//     }
+//     toPush(obj){
+//         this.bd.push(obj)
+//     }
+// }
+// const a = new Human('Misha','17');
+// a.toPush(a);
+// console.log(a.get());
+
 
 
 // Акаунт пошта і пароль з валідацією
 
-const login = document.getElementById('mail');
-const pass = document.getElementById('pass');
-function validatorPass(login, password) {
-    let alogin;
-    let apass;
-    if (login.length !== 0) {
-        const atsignindex = login.indexOf('@');
-        const pointindex = login.indexOf('.');
-        if (
-            atsignindex !== -1 &&
-            pointindex !== -1 &&
-            login.slice(0, atsignindex).length > 0
-            && login.slice(atsignindex + 1, pointindex).length > 0
-            && login.slice(pointindex + 1, login.length).length > 0
-        ){
-            alogin = true
-        } else alogin = false
-    };
-    const hasNum = /\d/.test(password);
-    const uppercase = /[A-Z]/.test(password);
-    const islengthcorrect = password.length >= 8;
-    const hasUnderscore = password.includes("_")
-    if (hasNum && uppercase && islengthcorrect && hasUnderscore) {
-        apass = true
-    }else apass = false
+// const login = document.getElementById('mail');
+// const pass = document.getElementById('pass');
+// function validatorPass(login, password) {
+//     let alogin;
+//     let apass;
+//     if (login.length !== 0) {
+//         const atsignindex = login.indexOf('@');
+//         const pointindex = login.indexOf('.');
+//         if (
+//             atsignindex !== -1 &&
+//             pointindex !== -1 &&
+//             login.slice(0, atsignindex).length > 0
+//             && login.slice(atsignindex + 1, pointindex).length > 0
+//             && login.slice(pointindex + 1, login.length).length > 0
+//         ){
+//             alogin = true
+//         } else alogin = false
+//     };
+//     const hasNum = /\d/.test(password);
+//     const uppercase = /[A-Z]/.test(password);
+//     const islengthcorrect = password.length >= 8;
+//     const hasUnderscore = password.includes("_")
+//     if (hasNum && uppercase && islengthcorrect && hasUnderscore) {
+//         apass = true
+//     }else apass = false
 
-    return alogin && apass ? true : false;
-};
-const submit = document.getElementById('sub')
-submit.addEventListener('click', validatorPass(login, pass));
-console.log(submit);
+//     return alogin && apass ? true : false;
+// };
+// const submit = document.getElementById('sub')
+// submit.addEventListener('click', validatorPass(login, pass));
+// console.log(submit);
 
