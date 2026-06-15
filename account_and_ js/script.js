@@ -121,3 +121,33 @@
 // submit.addEventListener('click', validatorPass(login, pass));
 // console.log(submit);
 
+
+// class User {
+//     UserDb = [];
+
+//     constructor() {
+//         // this.login = login;
+//         // this.password = password;
+//     }
+//     pushToUserDb(log, pass) {
+//         const user = {
+//             login: log,
+//             password: pass,
+//         }
+//         this.UserDb.push(user);
+//     }
+//     getUserdb() {
+//         return this.UserDb;
+//     }
+// }
+
+// const input = document.getElementById('mail');
+// const newUser = new User();
+// function clicker() {
+//     const login = input.value;
+//     const password = 123;
+
+//     newUser.pushToUserDb(login, password);
+
+//     console.log(newUser.getUserdb());
+// }
