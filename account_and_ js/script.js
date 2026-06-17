@@ -151,3 +151,46 @@
 
 //     console.log(newUser.getUserdb());
 // }
+
+// const humans = [{
+//     name: 'Sasha1',
+//     Age: 12,
+//     family:['mother','father','sister','brother'],
+// },
+// {
+//     name: 'Sasha2',
+//     Age: 12,
+//     family:['mother','father','sister','brother'],
+// },
+// {
+//     name: 'Sasha3',
+//     Age: 12,
+//     family:['mother','father','sister','brother'],
+// },
+// {
+//     name: 'Sasha4',
+//     Age: 12,
+//     family:['mother','father','brother'],
+// },
+// {
+//     name: 'Sasha5',
+//     Age: 12,
+//     family:['mother','father','brother'],
+// },
+// {
+//     name: 'Sasha6',
+//     Age: 12,
+//     family:['mother','father','brother'],
+// },
+// {
+//     name: 'Sasha7',
+//     Age: 12,
+//     family:['mother','father','brother'],
+// }]
+
+// for (const element of humans) {
+//     if (element.family.length + 1 === 5) {
+//         console.log(element);
+//     }
+// }
+
