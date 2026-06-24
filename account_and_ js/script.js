@@ -206,3 +206,25 @@
 // a = a.replaceAll('o','_');
 // console.log(a);
 
+// const star = '* ';
+// const space = ' ';
+// let s = 1;
+// for (let i = 2; i >= 0; i--) {
+//     const spaces = space.repeat(s);
+//     const stars = star.repeat(s);
+//     s++
+//     console.log(spaces + stars);
+// }
+
+// const arr = [3,4,7,12,9,10];
+// const odd = [];
+// const a = [];
+// for (const el of arr) {
+//     if (el % 2 == 0) {
+//         odd.push(el)
+//     }else{
+//         a.push(el)
+//     }
+// }
+// console.log(odd,a);
+
