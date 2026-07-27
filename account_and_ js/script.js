@@ -228,3 +228,16 @@
 // }
 // console.log(odd,a);
 
+const numbers = [1,2,3,4];
+
+console.log(' ', numbers.join(' '));
+
+for (let i = 1; i < numbers.length + 1; i++) {
+    const el = numbers[i];
+    const line = [i];
+    numbers.map( (j) => {
+        line.push(i * j)
+    })
+    console.log(line.join(' '));
+    
+}
