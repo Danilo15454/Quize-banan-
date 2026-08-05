@@ -194,7 +194,7 @@
 //     }
 // }
 
-// let result = 1000;
+// let result = prompt('which number?');
 
 // while (result > 0) {
 //     console.log(`${result} - 7 = ${result - 7}`);
@@ -241,4 +241,12 @@
 //     console.log(line.join(' '));
 // }
 
+// let num = prompt('which number?');
 
+// let minus = prompt('minus');
+
+// while (num > 0) {
+//     console.log(`${num} - ${minus} = ${num - minus}`);
+
+//     num -= minus;
+// }
