@@ -250,3 +250,30 @@
 
 //     num -= minus;
 // }
+
+// const productCard = {
+//     type: 'videocard',
+//     price: 5500
+// }
+
+// const cart = [];
+
+// function add() {
+//     for (const el in productCard) {
+//     if (cart === '') {
+//     cart.push(productCard)
+//     console.log(cart);
+//     }}
+// }
+
+// function del() {
+//     for (const el of cart) {
+//         if (cart !== '') {
+//             cart.delete(productCard)
+//             console.log(cart);
+            
+//         }
+//     }
+// }
+// add()
+// del()
