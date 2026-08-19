@@ -251,29 +251,42 @@
 //     num -= minus;
 // }
 
+// corzyna
+
 // const productCard = {
 //     type: 'videocard',
 //     price: 5500
 // }
 
-// const cart = [];
-
-// function add() {
-//     for (const el in productCard) {
-//     if (cart === '') {
-//     cart.push(productCard)
-//     console.log(cart);
-//     }}
+// const productCard1 = {
+//     type: 'card',
+//     price: 500
 // }
 
-// function del() {
+// const cart = [];
+
+// add(productCard);
+// add(productCard1);
+
+// console.log('cartadd', cart);
+
+// del(productCard)
+
+// console.log('cartadd', cart);
+
+
+// function add(product) {
+//     cart.push(product)
+// }
+
+// function del(product) {
 //     for (const el of cart) {
-//         if (cart !== '') {
-//             cart.delete(productCard)
-//             console.log(cart);
-            
+//         if (el === product) {
+//             const i = cart.indexOf(product);
+
+//             cart.splice(i, 1);
 //         }
 //     }
 // }
-// add()
-// del()
+
+
