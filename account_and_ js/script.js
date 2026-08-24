@@ -251,7 +251,7 @@
 //     num -= minus;
 // }
 
-// corzyna
+// корзина
 
 // const productCard = {
 //     type: 'videocard',
@@ -289,4 +289,5 @@
 //     }
 // }
 
+// додавання карточок
 
